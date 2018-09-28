@@ -1,0 +1,9 @@
+.DS_STORE
+node_modules
+__benchmarks__
+build/
+remote-repo/
+coverage/
+.module-cache
+*.log*
+.idea
