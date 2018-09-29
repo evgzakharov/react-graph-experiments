@@ -1,16 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import App from './app';
-import About from './components/About';
-import Sample from './components/Sample';
 
 const Routes = () => (
     <Router>
         <div>
-            <Redirect path="/" to="/portal"/>
-            <Route exact path="/portal" component={ App }/>
-            <Route path="/portal/about" component={ About }/>
-            <Route path="/portal/sample" component={ Sample }/>
+            <Route exact={ true } path='/' component={ App } />
         </div>
     </Router>
 );
