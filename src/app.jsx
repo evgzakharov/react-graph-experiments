@@ -3,11 +3,12 @@ import cn from 'arui-feather/cn';
 
 import actionList from './data/action-list.json';
 
+function parseGraph(graph) {
+    return graph.map(next => next.actionId);
+}
+
 @cn('index')
 export default class IndexPage extends React.Component {
-    static parseGraph(graph) {
-        return graph.map(next => next.actionId);
-    }
     constructor(props) {
         super(props);
         this.state = {};
@@ -16,7 +17,7 @@ export default class IndexPage extends React.Component {
     componentDidMount() {
         let actionGraph = actionList.map(action => ({
             id: action.id,
-            next: IndexPage.parseGraph(action.graphSettings ? JSON.parse(action.graphSettings) : []),
+            next: parseGraph(action.graphSettings ? JSON.parse(action.graphSettings) : []),
             depends: action.depends ? JSON.parse(action.depends) : []
         }));
         this.setState({ actionGraph });
