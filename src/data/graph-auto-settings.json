@@ -1,0 +1,50 @@
+[
+  {
+    "actionId": 17,
+    "dependsParams": [
+      {
+        "param": {
+          "sourceEntity": "order",
+          "parseJson": true,
+          "sourceParam": "settings.moderation"
+        },
+        "relationType": "eq",
+        "comparedValue": "true"
+      },
+      {
+        "param": {
+          "sourceEntity": "order",
+          "parseJson": false,
+          "sourceParam": "productTypeEntity.name"
+        },
+        "relationType": "eq",
+        "comparedValue": "packet_authorization"
+      }
+    ],
+    "groupCheckType": "or"
+  },
+  {
+    "actionId": 18,
+    "dependsParams": [
+      {
+        "param": {
+          "sourceEntity": "order",
+          "parseJson": true,
+          "sourceParam": "settings.moderation"
+        },
+        "relationType": "neq",
+        "comparedValue": "true"
+      },
+      {
+        "param": {
+          "sourceEntity": "order",
+          "parseJson": false,
+          "sourceParam": "productTypeEntity.name"
+        },
+        "relationType": "neq",
+        "comparedValue": "packet_authorization"
+      }
+    ],
+    "groupCheckType": "and"
+  }
+]

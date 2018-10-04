@@ -1,0 +1,40 @@
+{
+  "text": {
+    "sourceEntity": "action_param",
+    "parseJson": false,
+    "actionId": 22,
+    "name": "text"
+  },
+  "from": {
+    "sourceEntity": "const",
+    "parseJson": false,
+    "value": "ers@alfabank.ru"
+  },
+  "subject": {
+    "sourceEntity": "action_param",
+    "parseJson": false,
+    "actionId": 24,
+    "name": "subject"
+  },
+  "sendTo": [
+    {
+      "sourceEntity": "user",
+      "parseJson": false,
+      "sourceParam": "email"
+    }
+  ],
+  "sendCc": [
+    {
+      "sourceEntity": "const",
+      "parseJson": false,
+      "value": "MedvedevS@alfabank.ru"
+    }
+  ],
+  "sendBcc": [
+    {
+      "sourceEntity": "const",
+      "parseJson": false,
+      "value": "ers@alfabank.ru"
+    }
+  ]
+}
